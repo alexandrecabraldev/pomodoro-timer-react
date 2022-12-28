@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const DefaultLayoutContainer = styled.div`
 
-    width: 74rem;
+    max-width: 74rem;
     height: calc(100vh -10rem);
     display: flex;
     flex-direction: column; 
