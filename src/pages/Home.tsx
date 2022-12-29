@@ -1,10 +1,17 @@
 import { Play } from "phosphor-react"
 import {useForm} from "react-hook-form";
-import {HomeStyle, TimmerSection, Division, TextInformation} from "./HomeStyle"
+import {HomeStyle, TimmerSection, Division, TextInformation} from "./HomeStyle";
+import {zodResolver} from "@hookform/resolvers/zod";
+import * as zod from "zod";
+
+const validationForm=zod.object({
+    inputTask:zod.string().min(2),
+    inputNumberTask: zod.number().min(1).max(60)
+})
 
 export function Home(){
 
-    const {register, handleSubmit, watch } = useForm();
+    const {register, handleSubmit, watch } = useForm({resolver:zodResolver(validationForm)});
     
     function handleCreateTask(data: any){
         console.log(data); 
@@ -23,7 +30,7 @@ export function Home(){
                     />
 
                     <label htmlFor="time">durante</label>
-                    <input type="number" id="time" min={1} max={60} placeholder="00"
+                    <input type="number" id="time" min={1} max={60} placeholder="00" required
                     {...register("inputNumberTask", {valueAsNumber:true})}
                     />
 
