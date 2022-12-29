@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HistoryContainer = styled.main`
-    max-width: 58rem;
+    flex: 1;
     display: flex;
     gap: 2rem;
     flex-direction: column;
@@ -12,19 +12,29 @@ export const HistoryContainer = styled.main`
     }
 
     table{
+        //faz com que o espaçamento entre as linhas da tabela desapareçam
+        border-collapse: collapse;
+
         thead{
             background-color: ${props=>props.theme["gray-600"]};
-            
         }
     }
 `;
 export const TextHeadInformation = styled.th`
-    text-align: justify;
+    text-align: left;
     padding: 1rem 1.5rem;
+    background-color: ${props=>props.theme["gray-600"]};
+
+    &:first-child{
+        border-top-left-radius: 8px;
+    }
+
+    &:last-child{
+        border-top-right-radius: 8px;
+    }
 `;
 
-export const Status = styled.td`
-
+export const StatusContainer = styled.span`
     display: flex;
     align-items: center;
     gap:0.5rem;
@@ -34,7 +44,6 @@ export const Status = styled.td`
         width: 0.5rem;
         height: 0.5rem;
         border-radius: 50%;
-        border: 1px solid ${props=>props.theme["green-500"]};
         background-color: ${props=>props.theme["green-500"]};
 
     }
@@ -45,5 +54,6 @@ export const TableRowContainer = styled.tr`
 
     td{
         padding: 1rem 1.5rem;
+        border-top: 4px solid ${props=>props.theme["gray-800"]};
     }
 `;

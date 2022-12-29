@@ -1,4 +1,4 @@
-import { HistoryContainer, TextHeadInformation, TableRowContainer,Status } from "./HistoryStyle";
+import { HistoryContainer, TextHeadInformation, TableRowContainer,StatusContainer } from "./HistoryStyle";
 
 export function History(){
     return (
@@ -19,31 +19,39 @@ export function History(){
                         <td>Conserto de débitos técnicos </td>
                         <td>25 minutos</td>
                         <td>Há cerca de 2 meses</td>
-                        <Status>Concluído</Status>
+                        <td><StatusContainer>Concluído</StatusContainer></td>
                     </TableRowContainer>
                     <TableRowContainer>
                         <td>Conserto de débitos técnicos </td>
                         <td>25 minutos</td>
                         <td>Há cerca de 2 meses</td>
-                        <Status>Concluído</Status>
+                        <td>
+                            <StatusContainer>Concluído</StatusContainer>
+                        </td>
                     </TableRowContainer>
                     <TableRowContainer>
                         <td>Conserto de débitos técnicos </td>
                         <td>25 minutos</td>
                         <td>Há cerca de 2 meses</td>
-                        <Status>Concluído</Status>
+                        <td>
+                            <StatusContainer>Concluído</StatusContainer>
+                        </td>
                     </TableRowContainer>
                     <TableRowContainer>
                         <td>Conserto de débitos técnicos </td>
                         <td>25 minutos</td>
                         <td>Há cerca de 2 meses</td>
-                        <Status>Concluído</Status>
+                        <td>
+                            <StatusContainer>Concluído</StatusContainer>
+                        </td>
                     </TableRowContainer>
                     <TableRowContainer>
                         <td>Conserto de débitos técnicos </td>
                         <td>25 minutos</td>
                         <td>Há cerca de 2 meses</td>
-                        <Status>Concluído</Status>
+                        <td>
+                            <StatusContainer>Concluído</StatusContainer>
+                        </td>
                     </TableRowContainer>
                 </tbody>
             </table>
