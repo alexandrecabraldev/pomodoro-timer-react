@@ -14,17 +14,10 @@ export const TextInformation = styled.div`
     input[type="text"]{
         flex: 1;
         font-size: 1.125rem;
-
-        &:focus{
-            border-bottom-color: ${props=>props.theme["green-500"]};
-        }
     }
 
     input[type="number"]{
         width: 4.5rem;
-        &:focus{
-            border-bottom-color: ${props=>props.theme["green-500"]};
-        }
     }
 
     input{
@@ -39,6 +32,7 @@ export const TextInformation = styled.div`
 
         &:focus{
             box-shadow: none;
+            border-bottom-color: ${props=>props.theme["green-500"]};
         }
     }
 `;
