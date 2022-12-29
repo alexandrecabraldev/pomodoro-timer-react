@@ -34,7 +34,19 @@ export const TextHeadInformation = styled.th`
     }
 `;
 
-export const StatusContainer = styled.span`
+
+const ColorReferereceStatus={
+    red:"red-500",
+    yellow:"yellow-500",
+    green: "green-500"
+} as const 
+
+interface PropsStatus{
+    colorStatus: keyof typeof ColorReferereceStatus;
+}
+
+
+export const Status = styled.span<PropsStatus>`
     display: flex;
     align-items: center;
     gap:0.5rem;
@@ -44,7 +56,7 @@ export const StatusContainer = styled.span`
         width: 0.5rem;
         height: 0.5rem;
         border-radius: 50%;
-        background-color: ${props=>props.theme["green-500"]};
+        background-color: ${props=>props.theme[ColorReferereceStatus[props.colorStatus]]};
 
     }
 `;

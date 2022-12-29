@@ -1,4 +1,4 @@
-import { HistoryContainer, TextHeadInformation, TableRowContainer,StatusContainer } from "./HistoryStyle";
+import { HistoryContainer, TextHeadInformation, TableRowContainer,Status } from "./HistoryStyle";
 
 export function History(){
     return (
@@ -19,14 +19,14 @@ export function History(){
                         <td>Conserto de débitos técnicos </td>
                         <td>25 minutos</td>
                         <td>Há cerca de 2 meses</td>
-                        <td><StatusContainer>Concluído</StatusContainer></td>
+                        <td><Status colorStatus="green">Concluído</Status></td>
                     </TableRowContainer>
                     <TableRowContainer>
                         <td>Conserto de débitos técnicos </td>
                         <td>25 minutos</td>
                         <td>Há cerca de 2 meses</td>
                         <td>
-                            <StatusContainer>Concluído</StatusContainer>
+                            <Status colorStatus="green">Concluído</Status>
                         </td>
                     </TableRowContainer>
                     <TableRowContainer>
@@ -34,7 +34,7 @@ export function History(){
                         <td>25 minutos</td>
                         <td>Há cerca de 2 meses</td>
                         <td>
-                            <StatusContainer>Concluído</StatusContainer>
+                            <Status colorStatus="green">Concluído</Status>
                         </td>
                     </TableRowContainer>
                     <TableRowContainer>
@@ -42,7 +42,7 @@ export function History(){
                         <td>25 minutos</td>
                         <td>Há cerca de 2 meses</td>
                         <td>
-                            <StatusContainer>Concluído</StatusContainer>
+                            <Status colorStatus="red">Interrompido</Status>
                         </td>
                     </TableRowContainer>
                     <TableRowContainer>
@@ -50,7 +50,7 @@ export function History(){
                         <td>25 minutos</td>
                         <td>Há cerca de 2 meses</td>
                         <td>
-                            <StatusContainer>Concluído</StatusContainer>
+                            <Status colorStatus="yellow">Em andamento</Status>
                         </td>
                     </TableRowContainer>
                 </tbody>

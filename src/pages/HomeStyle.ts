@@ -45,6 +45,8 @@ export const TextInformation = styled.div`
 
 export const HomeStyle = styled.main`
 
+    padding:4.6rem 0 9.8rem 0; 
+
     form{
         display: flex;
         gap: 3.5rem;

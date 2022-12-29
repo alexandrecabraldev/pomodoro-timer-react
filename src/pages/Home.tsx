@@ -25,7 +25,7 @@ export function Home(){
                     <span>0</span>
                 </TimmerSection>
 
-                <button type="submit"> <Play/> Começar </button>
+                <button type="submit" disabled> <Play/> Começar </button>
             </form>
         </HomeStyle>
     )
