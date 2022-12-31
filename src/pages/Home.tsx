@@ -9,12 +9,21 @@ const validationForm=zod.object({
     inputNumberTask: zod.number().min(1).max(60)
 })
 
+type validationFormData = zod.infer<typeof validationForm>;
+
 export function Home(){
 
-    const {register, handleSubmit, watch } = useForm({resolver:zodResolver(validationForm)});
+    const {register, handleSubmit, watch, reset } = useForm<validationFormData>({resolver:zodResolver(validationForm),
+        defaultValues:{
+            inputTask:"",
+            inputNumberTask:0
+        
+        }
+    });
     
-    function handleCreateTask(data: any){
+    function handleCreateTask(data: validationFormData){
         console.log(data); 
+        reset();
     }
 
     const task = watch("inputTask");
